@@ -1,0 +1,186 @@
+          /* Setup */
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  color-scheme: dark;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #111;
+}
+
+          /* Body */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  --transition-type: cubic-bezier(0.19,1,0.22,1);
+  margin-top: -5rem;
+}
+
+.cards > :nth-child(2n) {
+  width: 18rem;
+  position: absolute;
+  transform-origin: center;
+  box-shadow: #121212 0 0 1rem;
+  border-radius: 1rem;
+  transition: all var(--transition-type)  1s;
+  
+}
+
+.cards > :nth-child(2n+1) {
+  width: 6rem;
+  position: absolute;
+  transform-origin: center;
+  box-shadow: #121212 0 0 1rem;
+  border-radius: 1rem;
+  transition: all var(--transition-type)  1s;
+}
+
+
+  /* * single components rules */
+
+img:nth-of-type(1){
+  z-index: 1;
+}
+
+.cards:hover > img:nth-child(1) {
+  /* animation */
+  translate: 15rem 20rem;
+  rotate: 10deg;
+}
+
+img:nth-of-type(2){
+  z-index: 2;
+  translate: -1.5rem -1rem;
+  rotate: -3deg;
+}
+
+.cards:hover > img:nth-child(2) {
+  /* animation */
+  translate: -12rem 3rem;
+  rotate: -25deg;
+  scale: 90%;
+}
+
+img:nth-of-type(3){
+  z-index: 3;
+}
+
+.cards:hover > img:nth-child(3) {
+  /* animation */
+  translate: 17rem -9rem;
+  rotate: -12deg;
+}
+
+img:nth-of-type(4){
+  z-index: 4;
+  translate: 0rem;
+  rotate: 3deg;
+}
+
+.cards:hover > img:nth-child(4) {
+  /* animation */
+  translate: -4rem 2rem;
+  rotate: -5deg;
+  scale: 90%;
+}
+
+img:nth-of-type(5){
+  z-index: 5;
+}
+
+.cards:hover > img:nth-child(5) {
+  /* animation */
+  translate: -11rem -11.5rem;
+  rotate: 16deg;
+}
+
+img:nth-of-type(6){
+  z-index: 6;
+  translate: 0rem;
+  rotate: -1deg;
+}
+
+.cards:hover > img:nth-child(6) {
+  /* animation */
+  translate: 4rem 2rem;
+  rotate: 15deg;
+  scale: 90%;
+}
+
+img:nth-of-type(7){
+  z-index: 7;
+}
+
+.cards:hover > img:nth-child(7) {
+  /* animation */
+  translate: -15.5rem 16rem;
+  rotate: -13deg;
+}
+
+img:nth-of-type(8){
+  z-index: 8;
+  translate: 1.5rem 2rem;
+  rotate: 3deg;
+}
+
+.cards:hover > img:nth-child(8) {
+  /* animation */
+  translate: 13rem 4.5rem;
+  rotate: 25deg;
+  scale: 90%;
+}
+
+          
+          /* Animation */
+
+@keyframes name {
+  0%{
+  }
+  100%{
+  }
+}
+
+          /* Responsive */
+
+@media screen and (min-width:calc(1920px * calc(1 + 1/2) - 100px)) {
+  html{
+    font-size: calc(16px * calc(1 + 1/2));
+  }
+}
+
+@media screen and (min-width:calc(1920px * calc(1 + 1/3) - 200px)) {
+  html{
+    font-size: calc(16px * calc(1 + 1/3));
+  }
+}
+
+@media screen and (min-width:calc(1920px * calc(1 + 1/1) - 300px)) {
+  html{
+    font-size: calc(16px * calc(1 + 1/1));
+  }
+}
+
+@media screen and (min-width:calc(1920px * calc(1 + 2/1) - 400px)) {
+  html{
+    font-size: calc(16px * calc(1 + 2/1));
+  }
+}
+
+@media screen and (min-width:calc(1920px * calc(1 + 3/1) - 500px)) {
+  html{
+    font-size: calc(16px * calc(1 + 3/1));
+  }
+}
+
+          /* Custom-Scrollbar */
