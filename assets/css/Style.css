@@ -36,7 +36,7 @@ body{
 }
 
 .cards > :nth-child(2n) {
-  width: 18rem;
+  width: 19rem;
   position: absolute;
   transform-origin: center;
   box-shadow: #121212 0 0 1rem;
