@@ -14,12 +14,12 @@ const heartFunction = () => {
     cardsElements[nextActive].classList.add('from-b')
 
     setTimeout(() => {
-        cardsElements[curentActive].classList.remove('to-a')
-        cardsElements[curentActive].setAttribute('statut', 'not-active')
         cardsElements[nextActive].setAttribute('statut', 'active')
         setTimeout(() => {
             cardsElements[nextActive].classList.remove('from-b')
             setTimeout(() => {
+                cardsElements[curentActive].classList.remove('to-a')
+                cardsElements[curentActive].setAttribute('statut', 'not-active')
                 btnHeart.addEventListener('click', heartFunction,{once: true})
                 curentActive == lastElement ? curentActive = 0 : curentActive++
             }, 25);
@@ -36,12 +36,12 @@ const mehFunction = () => {
     cardsElements[nextActive].classList.add('from-a')
 
     setTimeout(() => {
-        cardsElements[curentActive].classList.remove('to-b')
-        cardsElements[curentActive].setAttribute('statut', 'not-active')
         cardsElements[nextActive].setAttribute('statut', 'active')
         setTimeout(() => {
             cardsElements[nextActive].classList.remove('from-a')
             setTimeout(() => {
+                cardsElements[curentActive].classList.remove('to-b')
+                cardsElements[curentActive].setAttribute('statut', 'not-active')
                 btnMeh.addEventListener('click', mehFunction,{once: true})
                 curentActive == 0 ? curentActive = lastElement : curentActive--
             }, 25);
