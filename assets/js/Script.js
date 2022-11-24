@@ -10,22 +10,46 @@ const heartFunction = () => {
     const lastElement = cardsElements.length - 1
     const nextActive = curentActive == lastElement ? 0 : curentActive + 1
     
-    cardsElements[curentActive].setAttribute('statut', 'not-active')
-    cardsElements[nextActive].setAttribute('statut', 'active')
+    cardsElements[curentActive].classList.add('to-a')
+    cardsElements[nextActive].classList.add('from-b')
 
-    curentActive == lastElement ? curentActive = 0 : curentActive++
+    setTimeout(() => {
+        cardsElements[curentActive].classList.remove('to-a')
+        cardsElements[curentActive].setAttribute('statut', 'not-active')
+        cardsElements[nextActive].setAttribute('statut', 'active')
+        setTimeout(() => {
+            cardsElements[nextActive].classList.remove('from-b')
+            setTimeout(() => {
+                btnHeart.addEventListener('click', heartFunction,{once: true})
+                curentActive == lastElement ? curentActive = 0 : curentActive++
+            }, 25);
+        }, 25);
+    }, 425);
+
 }
 
 const mehFunction = () => {
     const lastElement = cardsElements.length - 1
     const nextActive = curentActive == 0 ? lastElement : curentActive - 1
     
-    cardsElements[curentActive].setAttribute('statut', 'not-active')
-    cardsElements[nextActive].setAttribute('statut', 'active')
+    cardsElements[curentActive].classList.add('to-b')
+    cardsElements[nextActive].classList.add('from-a')
 
-    curentActive == 0 ? curentActive = lastElement : curentActive--
+    setTimeout(() => {
+        cardsElements[curentActive].classList.remove('to-b')
+        cardsElements[curentActive].setAttribute('statut', 'not-active')
+        cardsElements[nextActive].setAttribute('statut', 'active')
+        setTimeout(() => {
+            cardsElements[nextActive].classList.remove('from-a')
+            setTimeout(() => {
+                btnMeh.addEventListener('click', mehFunction,{once: true})
+                curentActive == 0 ? curentActive = lastElement : curentActive--
+            }, 25);
+        }, 25);
+    }, 425);
+
 }
 
-btnHeart.addEventListener('click', heartFunction)
+btnHeart.addEventListener('click', heartFunction,{once: true})
 
-btnMeh.addEventListener('click', mehFunction)
+btnMeh.addEventListener('click', mehFunction,{once: true})

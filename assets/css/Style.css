@@ -25,60 +25,36 @@ body{
   --transition-type: cubic-bezier(0.2,1,0.2,1);
 }
 
-.container.a .cards {
-  animation: to-right .75s var(--transition-type) forwards;
+.cards {
+  transition: all .75s var(--transition-type);
 }
 
-.container.b .cards {
-  animation: to-left .75s var(--transition-type) forwards;
+.cards.to-a {
+  /* animation: to-right .75s var(--transition-type) forwards; */
+  scale: 0%;
+  translate: 50%;
+  rotate: 25deg;
 }
 
-.container.from-a .cards {
-  animation: from-right .75s var(--transition-type) forwards;
+.cards.to-b {
+  /* animation: to-left .75s var(--transition-type) forwards; */
+  scale: 0%;
+  translate: -50%;
+  rotate: -25deg;
 }
 
-.container.from-b .cards {
-  animation: from-left .75s var(--transition-type) forwards;
+.cards.from-a {
+  /* animation: from-right .75s var(--transition-type) forwards; */
+  scale: 0%;
+  translate: 50%;
+  rotate: 25deg;
 }
 
-@keyframes to-right {
-  0%{
-  }
-  100%{
-    scale: 0%;
-    translate: 50%;
-    rotate: 25deg;
-  }
-}
-
-@keyframes to-left {
-  0%{
-  }
-  100%{
-    scale: 0%;
-    translate: -50%;
-    rotate: -25deg;
-  }
-}
-
-@keyframes from-right {
-  0%{
-  }
-  100%{
-    scale: 0%;
-    translate: 50%;
-    rotate: 25deg;
-  }
-}
-
-@keyframes from-left {
-  0%{
-  }
-  100%{
-    scale: 0%;
-    translate: -50%;
-    rotate: -25deg;
-  }
+.cards.from-b {
+  /* animation: from-left .75s var(--transition-type) both; */
+  scale: 0%;
+  translate: -50%;
+  rotate: -25deg;
 }
 
 .container-cards {
