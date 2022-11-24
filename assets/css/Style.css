@@ -22,7 +22,72 @@ body{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  --transition-type: cubic-bezier(0.19,1,0.22,1);
+  --transition-type: cubic-bezier(0.2,1,0.2,1);
+}
+
+.container.a .cards {
+  animation: to-right .75s var(--transition-type) forwards;
+}
+
+.container.b .cards {
+  animation: to-left .75s var(--transition-type) forwards;
+}
+
+.container.from-a .cards {
+  animation: from-right .75s var(--transition-type) forwards;
+}
+
+.container.from-b .cards {
+  animation: from-left .75s var(--transition-type) forwards;
+}
+
+@keyframes to-right {
+  0%{
+  }
+  100%{
+    scale: 0%;
+    translate: 50%;
+    rotate: 25deg;
+  }
+}
+
+@keyframes to-left {
+  0%{
+  }
+  100%{
+    scale: 0%;
+    translate: -50%;
+    rotate: -25deg;
+  }
+}
+
+@keyframes from-right {
+  0%{
+  }
+  100%{
+    scale: 0%;
+    translate: 50%;
+    rotate: 25deg;
+  }
+}
+
+@keyframes from-left {
+  0%{
+  }
+  100%{
+    scale: 0%;
+    translate: -50%;
+    rotate: -25deg;
+  }
+}
+
+.container-cards {
+  width: 16rem;
+  height: 28rem;
+}
+
+.cards[statut='not-active'] {
+  display: none;
 }
 
 .cards {
@@ -33,6 +98,7 @@ body{
   height: 28rem;
   --transition-type: cubic-bezier(0.19,1,0.22,1);
   margin-top: -2rem;
+  position: absolute;
 }
 
 .cards > :nth-child(2n) {
@@ -183,13 +249,6 @@ img:nth-of-type(8){
 
           
           /* Animation */
-
-@keyframes name {
-  0%{
-  }
-  100%{
-  }
-}
 
           /* Responsive */
 
