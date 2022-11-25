@@ -18,7 +18,7 @@ The images/parts are animatied with CSS classes and I've been using the attribut
 
 ### Executing program
 
-* Execute index.html or https://emerone.github.io/KIPPO to run the program
+* Execute index.html or go to https://emerone.github.io/KIPPO to run the program
 
 ## Version History
 
