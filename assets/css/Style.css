@@ -60,7 +60,7 @@ body{
 .container-cards {
   width: 16rem;
   height: 28rem;
-  transition: all var(--transition-type) 1s .1s;
+  transition: all var(--transition-type) 1s .05s;
 }
 
 .cards[statut='not-active'] {
