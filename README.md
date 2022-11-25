@@ -1,6 +1,6 @@
 # KIPPO
 
-Advanced type of carousel in JS.
+Advanced type of carousel in JS from [KIPPO](https://kippo.com/chill).
 
 ## Description
 
