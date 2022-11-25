@@ -220,6 +220,8 @@ img:nth-of-type(8){
   color: #d41c1c;
 }
 
+  /* * animation on btn */
+
 body:has(.btns > :first-child:hover) .container-cards {
   translate: -5%;
   rotate: -5deg;
@@ -229,6 +231,8 @@ body:has(.btns > :first-child:hover) .container-cards {
 .btns > :last-child {
   color: #72b0c9;
 }
+
+  /* * animation on btn */
 
 body:has(.btns > :last-child:hover) .container-cards {
   translate: 5%;
