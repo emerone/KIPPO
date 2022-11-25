@@ -46,8 +46,7 @@ command to run if program contains helper info
     * CSS cards placement and tranision
     * See [commit change](https://github.com/emerone/KIPPO/commit/cb7e0c4129a905b727c325e08b4f8d0c7fb53951) or See [release history](https://github.com/emerone/KIPPO/commits/master)
 * 0.1
-    * Initial Release
-    * Static Images 
+    * Initial Release / Static Images
     * See [commit change](https://github.com/emerone/KIPPO/commit/9c3fefd6f326afe9c74dc1db38261a7cd14191ec) or See [release history](https://github.com/emerone/KIPPO/commits/master)
 
 ## License
