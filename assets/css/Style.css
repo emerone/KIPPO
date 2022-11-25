@@ -60,6 +60,7 @@ body{
 .container-cards {
   width: 16rem;
   height: 28rem;
+  transition: all var(--transition-type) 1s;
 }
 
 .cards[statut='not-active'] {
@@ -219,8 +220,20 @@ img:nth-of-type(8){
   color: #d41c1c;
 }
 
+body:has(.btns > :first-child:hover) .container-cards {
+  translate: -5%;
+  rotate: -5deg;
+  scale: 95%;
+}
+
 .btns > :last-child {
   color: #72b0c9;
+}
+
+body:has(.btns > :last-child:hover) .container-cards {
+  translate: 5%;
+  rotate: 5deg;
+  scale: 95%;
 }
 
           
