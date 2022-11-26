@@ -5,6 +5,7 @@ Advanced type of carousel in JS from [KIPPO](https://kippo.com/chill).
 ## Description
 
 The images/parts are animatied with CSS classes and I've been using the attribute to show the right parts.
+This is not mobile supported
 
 ## Getting Started
 
